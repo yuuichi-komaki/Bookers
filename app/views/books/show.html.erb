@@ -1,0 +1,16 @@
+<P class="successfully"><%= flash[:notice] %></P>
+<P class="successfully"><%= flash[:update] %></P>
+
+<div class="show"
+<%= form_with model:@book, local:true do |f| %>
+<p><strong>Title:</strong>
+  <%= @book.title %></p>
+
+<p><strong>Body:</strong>
+  <%= @book.body %></p>
+
+<% end %>
+</div>
+
+<p class="show_button"><%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %></p>
